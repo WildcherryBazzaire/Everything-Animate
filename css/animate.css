@@ -23,7 +23,13 @@ input {
 }
 
 #matrix {
-  transform: matrix();
+  border: 2px solid #000;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 10px;
+  text-align: center;
+  line-height: 200px;
 }
 
 input:focus {
@@ -45,7 +51,17 @@ input:focus {
 }
 
 #three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y {
-  transition:transform 1s;
+    border: 2px solid #000;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 10px;
+    transition:transform 1s;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    background-color: salmon;
+    color: pink;
 }
 
 #three-dimension:active {
@@ -53,19 +69,19 @@ input:focus {
 }
 
 #translate-zed:active {
-  transform: scaleZ(5);
+  transform: rotateZ(180deg);
 }
 
 #perspective:active {
-  transform: perspective(17);
+  transform: perspective(17px);
 }
 
 #translate-X:active {
-  transform: translateX(4);
+  transform: translateX(41px);
 }
 
 #translate-Y:active {
-  transform: translateY(7);
+  transform: translateY(73px);
 }
 
 #matrix-amped {
