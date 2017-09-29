@@ -1,0 +1,30 @@
+#rotate, #skew, #all, #animate, #pseudo, #matrix, #three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y{
+  border: 2px solid #000;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 10px;
+}
+
+#animate{
+  font-size: 50px;
+  text-align: center;
+  line-height: 200px;
+}
+
+#pseudo, #jsEvent, #three-dimension{
+  background-color: salmon;
+  color: pink;
+  font-size: 50px;
+  text-align: center;
+  line-height: 200px;
+}
+
+ #three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y{
+   background-color: blue;
+}
+
+h3{
+  border-bottom: 1px solid #000;
+  text-align: center;
+}

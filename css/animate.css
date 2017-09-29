@@ -1,0 +1,73 @@
+@keyframes keyframing {
+  0% {transform: rotate(0deg); margin-left: 0%}
+  50%{transform: rotate(180deg); margin-left: 75%;}
+  100%{transform: rotate(360deg); margin-left: 0%;}
+}
+#rotate {
+  transform: rotate(45deg);
+}
+
+#skew {
+  transform: skewX(45deg);
+}
+
+#all { /* come back to this */
+  transform: rotate(75deg);
+  transform: skewX(45deg);
+}
+
+input {
+  outline: none;
+  display: table;
+  margin: 0 auto;
+}
+
+#matrix {
+  transform: matrix();
+}
+
+input:focus {
+  box-shadow: 1px 1px 2px;
+}
+
+#animate {
+  animation: keyframing 14s ease 0s infinite alternate;
+}
+
+#pseudo {
+  transition: background-color,margin-left;
+  transition-duration: 10s;
+}
+
+#pseudo:hover {
+  background-color: pink;
+  margin-left: 70%;
+}
+
+#three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y {
+  transition:transform 1s;
+}
+
+#three-dimension:active {
+  transform: scale3d(2,2,10);
+}
+
+#translate-zed:active {
+  transform: scaleZ(5);
+}
+
+#perspective:active {
+  transform: perspective(17);
+}
+
+#translate-X:active {
+  transform: translateX(4);
+}
+
+#translate-Y:active {
+  transform: translateY(7);
+}
+
+#matrix-amped {
+  transform: matrix3d(3,4,6,1,9,6,5,3,1,2,6,9,0,3,0,2);
+}
