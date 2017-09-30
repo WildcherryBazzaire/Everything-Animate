@@ -1,0 +1,124 @@
+@keyframes keyframing {
+  0% {
+    transform: rotate(0deg); 
+    margin-left: 0%; 
+    color:black;
+  }
+  50%{
+    transform: rotate(180deg); 
+    margin-left: 75%; 
+    color:rgba(255,255,255,0);
+  }
+  100%{
+    transform: rotate(360deg); 
+    margin-left: 0%; 
+    color:black;
+  }
+}
+
+@keyframes five_framing {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: yellow;
+  }
+  75% {
+    color: white;
+  }
+  100% {
+    color:pink;
+  }
+}
+
+#rotate {
+  transform: rotate(45deg);
+}
+
+#skew {
+  transform: skewX(45deg);
+}
+
+#all { /* come back to this */
+  transform: rotate(75deg) skewX(10deg);
+}
+
+input {
+  outline: none;
+  display: table;
+  margin: 0 auto;
+}
+
+#matrix {
+  border: 2px solid #000;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 200px;
+  transform: matrix(.75,0.1,0.1,.75,4,5);
+}
+
+input:focus {
+  box-shadow: 1px 1px 2px;
+}
+
+#animate {
+  animation: keyframing 14s ease 0s infinite alternate;
+}
+
+#pseudo {
+  transition: background-color,margin-left;
+  transition-duration: 10s;
+}
+
+#pseudo:hover {
+  background-color: pink;
+  margin-left: 70%;
+}
+
+#three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y,#keyframed_five {
+    border: 2px solid #000;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto 13px auto;
+    transition:transform 1s;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    background-color: salmon;
+    color: pink;
+}
+
+#three-dimension:active {
+  transform: scale3d(2,2,10);
+}
+
+#translate-zed:active {
+  transform: rotateZ(180deg);
+}
+
+#perspective:active {
+  transform: perspective(17px);
+}
+
+#translate-X:active {
+  transform: translateX(41px);
+}
+
+#translate-Y:active {
+  transform: translateY(73px);
+}
+
+#matrix-amped {
+  transform: matrix3d(3,4,6,1,9,6,5,3,1,2,6,9,0,3,0,2);
+}
+
+#keyframed_five {
+  animation: five_framing 14s ease 0s infinite alternate;
+}
