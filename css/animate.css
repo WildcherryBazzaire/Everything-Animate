@@ -1,8 +1,39 @@
 @keyframes keyframing {
-  0% {transform: rotate(0deg); margin-left: 0%}
-  50%{transform: rotate(180deg); margin-left: 75%;}
-  100%{transform: rotate(360deg); margin-left: 0%;}
+  0% {
+    transform: rotate(0deg); 
+    margin-left: 0%; 
+    color:black;
+  }
+  50%{
+    transform: rotate(180deg); 
+    margin-left: 75%; 
+    color:rgba(255,255,255,0);
+  }
+  100%{
+    transform: rotate(360deg); 
+    margin-left: 0%; 
+    color:black;
+  }
 }
+
+@keyframes five_framing {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: yellow;
+  }
+  75% {
+    color: white;
+  }
+  100% {
+    color:pink;
+  }
+}
+
 #rotate {
   transform: rotate(45deg);
 }
@@ -12,8 +43,7 @@
 }
 
 #all { /* come back to this */
-  transform: rotate(75deg);
-  transform: skewX(45deg);
+  transform: rotate(75deg) skewX(10deg);
 }
 
 input {
@@ -27,9 +57,10 @@ input {
   width: 200px;
   height: 200px;
   display: block;
-  margin: 10px;
+  margin: 0 auto;
   text-align: center;
   line-height: 200px;
+  transform: matrix(.75,0.1,0.1,.75,4,5);
 }
 
 input:focus {
@@ -50,12 +81,12 @@ input:focus {
   margin-left: 70%;
 }
 
-#three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y {
+#three-dimension, #perspective, #matrix-amped, #translate-zed, #translate-X, #translate-Y,#keyframed_five {
     border: 2px solid #000;
     width: 200px;
     height: 200px;
     display: block;
-    margin: 10px;
+    margin: 0 auto 13px auto;
     transition:transform 1s;
     font-size: 25px;
     text-align: center;
@@ -86,4 +117,8 @@ input:focus {
 
 #matrix-amped {
   transform: matrix3d(3,4,6,1,9,6,5,3,1,2,6,9,0,3,0,2);
+}
+
+#keyframed_five {
+  animation: five_framing 14s ease 0s infinite alternate;
 }
